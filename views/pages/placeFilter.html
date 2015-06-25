@@ -1,6 +1,6 @@
 <template name="placeFilter">
       <form class="filterForm">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="form-group">
               <label for="activity">Filter By Activity</label>
               <select class="form-control activity" name="activity" id="activity">
@@ -20,7 +20,7 @@
             </select>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="form-group">
             <label for="price">Filter By Price</label>
             <select class="form-control price" name="price" id="price">
@@ -34,6 +34,14 @@
                 <label for="filter">Filter by Name or Description</label>
                 <input class="form-control filter" id="filter" name="filter" type="text" placeholder="Filter Places"/>
             </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <button class="btn btn-primary clearFilters">Clear Filters</button>
+          </div>
+          <div class="row">
+            <button class="btn btn-warning addSomething">Suggest Something</button>
+          </div>
         </div>
       </form>
 </template>

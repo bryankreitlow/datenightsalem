@@ -13,8 +13,10 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <li class="{{isActiveRoute 'Main'}}"><a href="{{ pathFor 'Main'}}">Get Out</a></li>
+          <li class="{{isActiveRoute 'Events'}}"><a href="{{ pathFor 'Events'}}">Events</a></li>
           {{# if currentUser }}
-          <li><a href="{{ pathFor 'Main'}}">Main</a></li>
+            <li class="{{isActiveRoute 'ReviewSubmissions'}}"><a href="{{ pathFor 'ReviewSubmissions'}}">Review</a></li>
           {{/if}}
           <!--{{> loginButtons}}-->
         </ul>

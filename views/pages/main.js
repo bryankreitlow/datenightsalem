@@ -22,7 +22,11 @@ if(Meteor.isClient) {
       if(!query['$and'].length) {
         query = {};
       }
-      return Places.find(query, {sort: {name: 1}});
+      var sortField = Session.get("sortByField");
+      var sortDirection = Session.get("sortDirection") === "desc" ? 1 : -1;
+      var options = {sort: {}};
+      options.sort[sortField] = sortDirection;
+      return Places.find(query, options);
     },
     activityTypes: function() {
       var activityTypes = [];

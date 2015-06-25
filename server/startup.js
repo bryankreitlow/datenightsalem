@@ -105,4 +105,40 @@ Meteor.startup(function () {
       });
     }
   }
+
+  if (Events.find().count() === 0) {
+    var events = [{
+      title: 'TedX Salem',
+      url: 'http://tedxsalem.us/',
+      allDay: true,
+      price: '75',
+      start: '10-3-2015',
+      end: '10-3-2015'
+    },{
+      title: 'Back to the Future 2 - Movies In The Park',
+      url: 'http://salemmoviesinthepark.com/',
+      price: '10',
+      start: '7-11-2015 20:00'
+    },{
+      title: 'The Boxtrolls - Movies In The Park',
+      url: 'http://salemmoviesinthepark.com/',
+      price: '10',
+      start: '7-18-2015 20:00'
+    },{
+      title: 'UP - Movies In The Park',
+      url: 'http://salemmoviesinthepark.com/',
+      price: '10',
+      start: '8-8-2015 20:00'
+    }];
+
+    for (var j = 0; j < events.length; j++) {
+      Events.insert({
+        title: events[j].title,
+        url: events[j].url,
+        start: new Date(events[j].start),
+        end: events[j].end ? new Date(events[j].end) : undefined,
+        price: events[j].price
+      });
+    }
+  }
 });

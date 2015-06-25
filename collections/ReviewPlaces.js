@@ -1,6 +1,6 @@
-Places = new Meteor.Collection("places");
+ReviewPlaces = new Meteor.Collection("reviewplaces");
 
-Places.allow({
+ReviewPlaces.allow({
   insert: function(){
     return false;
   },

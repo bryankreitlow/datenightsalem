@@ -9,8 +9,17 @@ if(Meteor.isClient) {
     'change .price': function(event) {
       Session.set("priceFilter", event.target.value);
     },
-    'change input.filter': function(event) {
+    'input .filter': function(event) {
       Session.set("filter", event.target.value);
+    },
+    'click button.clearFilters': function(event) {
+      event.preventDefault();
+      ["activityTypeFilter", "priceFilter", "cityFilter", "filter"].forEach(function(key) {
+        Session.set(key, "");
+      });
+    },
+    'click button.addSomething': function(event) {
+      Router.go('addPlace');
     },
     'submit .filterForm': function(event) {
       event.preventDefault();
