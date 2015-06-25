@@ -1,0 +1,20 @@
+<template name="placeList">
+  <div class="placeList col-xs-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td class="col-xs-4">Name<i class={{getSortClasses 'name'}}></i></td>
+          <td class="col-xs-1">Price</td>
+          <td class="col-xs-1">Distance</td>
+          <td class="col-xs-2">City</td>
+          <td class="col-xs-4">Description</td>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each places}}
+          {{> placeListItem}}
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>

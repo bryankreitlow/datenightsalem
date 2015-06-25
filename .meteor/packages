@@ -1,0 +1,21 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+accounts-password
+underscore
+iron:router
+stevezhu:lodash
+audit-argument-checks
+houston:admin
+mizzao:bootstrap-3
+ian:accounts-ui-bootstrap-3
+dburles:collection-helpers
+sacha:spin
+juliancwirko:s-alert
+juliancwirko:s-alert-genie
+zimme:active-route
+natestrauser:font-awesome

@@ -1,0 +1,39 @@
+<template name="placeFilter">
+      <form class="filterForm">
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="activity">Filter By Activity</label>
+              <select class="form-control activity" name="activity" id="activity">
+                <option value="">Activity Type</option>
+                  {{#each activityTypes}}
+                    <option value={{this}} {{typeSelected}}>{{this}}</option>
+                  {{/each}}
+              </select>
+            </div>
+          <div class="form-group">
+            <label for="city">Filter By City</label>
+            <select class="form-control city" name="city" id="city">
+              <option value="">Select City</option>
+                {{#each placeCities}}
+                  <option value={{this}} {{citySelected}}>{{this}}</option>
+                {{/each}}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="price">Filter By Price</label>
+            <select class="form-control price" name="price" id="price">
+              <option value="">Select Price</option>
+                {{#each prices}}
+                  <option value={{this}} {{priceSelected}}>{{displayPrice}}</option>
+                {{/each}}
+            </select>
+          </div>
+            <div class="form-group">
+                <label for="filter">Filter by Name or Description</label>
+                <input class="form-control filter" id="filter" name="filter" type="text" placeholder="Filter Places"/>
+            </div>
+        </div>
+      </form>
+</template>
